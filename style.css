@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 480px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+}
+.bogo-banner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bogo-banner::before,
+.bogo-banner::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 0 10px;
+}
+
+.bogo-banner span {
+  color: #f65b7c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bundle-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.bundle-container.active {
+  border: 2px solid #f65b7c;
+  background-color: #fff6f8;
+}
+
+.bundle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.radio-btn {
+  margin-right: 10px;
+}
+
+.price-block {
+  text-align: right;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 12px;
+  display: block;
+}
+
+.bundle-options {
+  display: none;
+  margin-top: 10px;
+}
+
+.bundle-container.active .bundle-options {
+  display: block;
+}
+
+.selector-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+select {
+  padding: 5px;
+}
+
+.badge {
+  background-color: #f65b7c;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+
+.most-popular {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #f65b7c;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.delivery {
+  color: #f65b7c;
+  font-weight: bold;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  background-color: #f65b7c;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .selector-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
